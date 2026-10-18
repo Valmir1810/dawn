@@ -1,4 +1,4 @@
-<section class="tib-colo color-{{ section.settings.color_scheme }} gradient{% if section.settings.image == blank and section.settings.fallback == blank %} tib-colo--noimage{% endif %}">
+<section class="tib-colo color-{{ section.settings.color_scheme }} gradient">
   <div class="tib-colo__media">
     {%- render 'tib-image',
       image: section.settings.image,
@@ -8,13 +8,33 @@
     -%}
   </div>
   <div class="tib-colo__overlay" style="--tib-overlay: {{ section.settings.overlay | divided_by: 100.0 }};"></div>
-  <div class="tib-colo__content page-width">
-    {%- if section.settings.eyebrow != blank -%}
-      <p class="tib-eyebrow">{{ section.settings.eyebrow | escape }}</p>
-    {%- endif -%}
-    <h2 class="tib-heading">{{ section.settings.heading }}</h2>
-    {%- if section.settings.text != blank -%}
-      <div class="tib-text">{{ section.settings.text }}</div>
+
+  <div class="tib-colo__inner page-width">
+    <div class="tib-colo__content">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="tib-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      <h2 class="tib-heading">{{ section.settings.heading }}</h2>
+      <span class="tib-colo__line"></span>
+      {%- if section.settings.text != blank -%}
+        <div class="tib-text">{{ section.settings.text }}</div>
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.inset_image != blank or section.settings.inset_fallback != blank -%}
+      <figure class="tib-colo__inset">
+        <div class="tib-colo__inset-media">
+          {%- render 'tib-image',
+            image: section.settings.inset_image,
+            fallback: section.settings.inset_fallback,
+            alt: section.settings.inset_caption,
+            sizes: '(min-width: 990px) 280px, 50vw'
+          -%}
+        </div>
+        {%- if section.settings.inset_caption != blank -%}
+          <figcaption>{{ section.settings.inset_caption }}</figcaption>
+        {%- endif -%}
+      </figure>
     {%- endif -%}
   </div>
 </section>
@@ -35,7 +55,7 @@
       "type": "text",
       "id": "fallback",
       "label": "Standardbild (Dateiname im Theme)",
-      "info": "Wird verwendet, wenn oben kein Bild gewählt ist."
+      "default": "tiburna-kolosseum.jpg"
     },
     {
       "type": "text",
@@ -51,25 +71,46 @@
       "step": 5,
       "unit": "%",
       "label": "Abdunklung des Bildes",
-      "default": 45
+      "default": 55
     },
     {
       "type": "text",
       "id": "eyebrow",
       "label": "Kleine Überschrift",
-      "default": "Seit fast 2000 Jahren"
+      "default": "Rom · 80 n. Chr."
     },
     {
       "type": "inline_richtext",
       "id": "heading",
       "label": "Überschrift",
-      "default": "Der Stein <em>des Kolosseums.</em>"
+      "default": "Gebaut für <em>die Ewigkeit.</em>"
     },
     {
       "type": "richtext",
       "id": "text",
       "label": "Text",
-      "default": "<p>Aus Travertin wurde das Kolosseum in Rom erbaut – und es steht bis heute. Derselbe Naturstein, der Kaiser und Jahrtausende überdauert hat, bringt jetzt diese Ruhe und Beständigkeit in Ihr Bad.</p>"
+      "default": "<p>Das Kolosseum wurde aus Travertin errichtet. Kaiser kamen und gingen, Imperien zerfielen – der Stein blieb. Seit fast 2000 Jahren.</p><p>Heute holen Sie diesen legendären Stein zu sich nach Hause.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Kleines Produktbild"
+    },
+    {
+      "type": "image_picker",
+      "id": "inset_image",
+      "label": "Produktbild"
+    },
+    {
+      "type": "text",
+      "id": "inset_fallback",
+      "label": "Standard-Produktbild (Dateiname im Theme)",
+      "default": "tiburna-rund.jpg"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "inset_caption",
+      "label": "Bildunterschrift",
+      "default": "Derselbe Stein. <em>In Ihrem Bad.</em>"
     },
     {
       "type": "color_scheme",

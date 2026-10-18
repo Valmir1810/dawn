@@ -156,10 +156,12 @@
       "settings": {
         "fallback": "tiburna-kolosseum.jpg",
         "alt": "Das Kolosseum in Rom, erbaut aus Travertin",
-        "overlay": 45,
-        "eyebrow": "Seit fast 2000 Jahren",
-        "heading": "Der Stein <em>des Kolosseums.</em>",
-        "text": "<p>Der Name TIBURNA geht auf Tibur zurück, das heutige Tivoli bei Rom. Von dort kam der Travertin, aus dem das Kolosseum erbaut wurde – und es steht bis heute. Derselbe Naturstein bringt jetzt diese Ruhe und Beständigkeit in Ihr Bad.</p>",
+        "overlay": 55,
+        "eyebrow": "Rom · 80 n. Chr.",
+        "heading": "Gebaut für <em>die Ewigkeit.</em>",
+        "text": "<p>Das Kolosseum wurde aus Travertin errichtet. Kaiser kamen und gingen, Imperien zerfielen – der Stein blieb. Seit fast 2000 Jahren.</p><p>Heute holen Sie diesen legendären Stein zu sich nach Hause.</p>",
+        "inset_fallback": "tiburna-rund.jpg",
+        "inset_caption": "Derselbe Stein. <em>In Ihrem Bad.</em>",
         "color_scheme": "scheme-3"
       }
     }
