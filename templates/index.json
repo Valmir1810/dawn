@@ -4,12 +4,12 @@
       "type": "tiburna-hero",
       "settings": {
         "fallback": "tiburna-rund.jpg",
-        "eyebrow": "Travertin für Ihr Bad",
+        "eyebrow": "Travertin · Für Ihr Bad",
         "heading": "Ihr Bad. <em>Ihr Spa.</em>",
-        "text": "<p>Warmer Naturstein, sanftes Licht, ein Moment der Stille. Mit TIBURNA wird Ihr tägliches Ritual zu einer kleinen Auszeit – wie im Spa, nur jeden Tag bei Ihnen zu Hause.</p>",
+        "text": "<p>Warmer Naturstein, sanftes Licht, ein Moment nur für Sie. Mit TIBURNA wird jeder Morgen zu einer kleinen Auszeit – wie im Spa, jeden Tag bei Ihnen zu Hause.</p>",
         "button_label": "Das Spa-Gefühl entdecken",
         "button_link": "shopify://collections/all",
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-3"
       }
     },
     "values": {

@@ -508,3 +508,78 @@ h1, h2, h3, .h0, .h1, .h2, .h3 {
       rgba(22, 17, 13, 0.88) 100%);
   }
 }
+
+/* ---------- Kraftvoller Auftritt (dunkle Bereiche, Gold) ---------- */
+
+.tib-goldline {
+  display: block;
+  width: 9.6rem;
+  height: 1px;
+  margin: 3.6rem 0 0;
+  background: linear-gradient(90deg, #D8C4A8, transparent);
+}
+
+.color-scheme-3 .tib-heading em,
+.color-scheme-3 .tib-story__quote {
+  color: #E3CFAF;
+}
+
+.color-scheme-3 .tib-eyebrow {
+  color: #D8C4A8;
+  opacity: 1;
+}
+
+.tib-hero.color-scheme-3 {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 20% 30%, #3a3029 0%, #2F2721 45%, #1f1915 100%);
+}
+
+.tib-hero.color-scheme-3 .tib-heading {
+  font-size: clamp(5.6rem, 9vw, 13.6rem);
+  line-height: 0.95;
+}
+
+.tib-hero.color-scheme-3 .tib-text {
+  font-size: 1.8rem;
+  margin-top: 3.2rem;
+}
+
+.tib-hero.color-scheme-3 .button {
+  background: #D8C4A8;
+  color: #2F2721;
+}
+
+.tib-hero__media {
+  position: relative;
+}
+
+.tib-hero.color-scheme-3 .tib-hero__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(31, 25, 21, 0.55) 0%, transparent 30%);
+}
+
+@media screen and (min-width: 990px) {
+  .tib-hero.color-scheme-3 .tib-hero__media::after {
+    background: linear-gradient(90deg, #2a221d 0%, rgba(42, 34, 29, 0) 28%);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tib-hero.color-scheme-3 .tib-hero__media img {
+    animation:
+      tib-settle 2.2s var(--tib-ease) both,
+      tib-kenburns 24s ease-in-out 2.2s infinite alternate;
+    transform-origin: 50% 40%;
+  }
+}
+
+.tib-hero .tib-heading em {
+  display: block;
+}
+
+.section-header .header-wrapper.color-scheme-3 {
+  border-bottom-color: rgba(216, 196, 168, 0.15);
+}
