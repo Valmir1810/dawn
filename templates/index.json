@@ -154,7 +154,7 @@
     "colosseum": {
       "type": "tiburna-colosseum",
       "settings": {
-        "fallback": "",
+        "fallback": "tiburna-kolosseum.jpg",
         "alt": "Das Kolosseum in Rom, erbaut aus Travertin",
         "overlay": 45,
         "eyebrow": "Seit fast 2000 Jahren",
