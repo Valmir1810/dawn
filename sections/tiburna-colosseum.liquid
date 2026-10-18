@@ -1,0 +1,87 @@
+<section class="tib-colo color-{{ section.settings.color_scheme }} gradient{% if section.settings.image == blank and section.settings.fallback == blank %} tib-colo--noimage{% endif %}">
+  <div class="tib-colo__media">
+    {%- render 'tib-image',
+      image: section.settings.image,
+      fallback: section.settings.fallback,
+      alt: section.settings.alt,
+      sizes: '100vw'
+    -%}
+  </div>
+  <div class="tib-colo__overlay" style="--tib-overlay: {{ section.settings.overlay | divided_by: 100.0 }};"></div>
+  <div class="tib-colo__content page-width">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="tib-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+    {%- endif -%}
+    <h2 class="tib-heading">{{ section.settings.heading }}</h2>
+    {%- if section.settings.text != blank -%}
+      <div class="tib-text">{{ section.settings.text }}</div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "TIBURNA Kolosseum",
+  "tag": "div",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Bild (Kolosseum)",
+      "info": "Querformat, mindestens 2000 Pixel breit."
+    },
+    {
+      "type": "text",
+      "id": "fallback",
+      "label": "Standardbild (Dateiname im Theme)",
+      "info": "Wird verwendet, wenn oben kein Bild gewählt ist."
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "Bildbeschreibung",
+      "default": "Das Kolosseum in Rom, erbaut aus Travertin"
+    },
+    {
+      "type": "range",
+      "id": "overlay",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "unit": "%",
+      "label": "Abdunklung des Bildes",
+      "default": 45
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Kleine Überschrift",
+      "default": "Seit fast 2000 Jahren"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Überschrift",
+      "default": "Der Stein <em>des Kolosseums.</em>"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Aus Travertin wurde das Kolosseum in Rom erbaut – und es steht bis heute. Derselbe Naturstein, der Kaiser und Jahrtausende überdauert hat, bringt jetzt diese Ruhe und Beständigkeit in Ihr Bad.</p>"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Farbschema",
+      "default": "scheme-3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TIBURNA Kolosseum"
+    }
+  ]
+}
+{% endschema %}

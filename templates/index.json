@@ -4,10 +4,10 @@
       "type": "tiburna-hero",
       "settings": {
         "fallback": "tiburna-rund.jpg",
-        "eyebrow": "Badaccessoires aus Travertin",
-        "heading": "Die Ruhe <em>des Steins.</em>",
-        "text": "<p>Seifenspender, Zahnbürstenhalter und mehr – geformt aus echtem Travertin. Zeitlose Stücke, die Ihr Bad in einen Ort der Ruhe verwandeln.</p>",
-        "button_label": "Kollektion entdecken",
+        "eyebrow": "Travertin für Ihr Bad",
+        "heading": "Ihr Bad. <em>Ihr Spa.</em>",
+        "text": "<p>Warmer Naturstein, sanftes Licht, ein Moment der Stille. Mit TIBURNA wird Ihr tägliches Ritual zu einer kleinen Auszeit – wie im Spa, nur jeden Tag bei Ihnen zu Hause.</p>",
+        "button_label": "Das Spa-Gefühl entdecken",
         "button_link": "shopify://collections/all",
         "color_scheme": "scheme-1"
       }
@@ -21,22 +21,22 @@
         "v1": {
           "type": "value",
           "settings": {
-            "title": "Echter Naturstein",
-            "text": "Jedes Stück entsteht aus massivem Travertin – kein Kunststoff, keine Imitation."
+            "title": "Wie im Hotel-Spa",
+            "text": "Travertin kennt man aus edlen Thermen und Spas. Jetzt steht er bei Ihnen am Waschtisch."
           }
         },
         "v2": {
           "type": "value",
           "settings": {
-            "title": "Ein echtes Unikat",
-            "text": "Poren, Adern und Farbnuancen machen jedes Objekt einzigartig. Kein Stück gleicht dem anderen."
+            "title": "Ruhe, die man spürt",
+            "text": "Kühl in der Hand, warm im Ton. Naturstein bringt Gelassenheit in jeden Morgen und jeden Abend."
           }
         },
         "v3": {
           "type": "value",
           "settings": {
-            "title": "Für Jahre gemacht",
-            "text": "Robust, langlebig und mit wenig Pflege über viele Jahre schön."
+            "title": "Jedes Stück ein Unikat",
+            "text": "Poren, Adern und Farbnuancen machen jedes Objekt einzigartig. Kein Stück gleicht dem anderen."
           }
         }
       },
@@ -50,7 +50,7 @@
       "type": "tiburna-duo",
       "settings": {
         "eyebrow": "Die Seifenspender",
-        "heading": "Zwei Formen. <em>Ein Stein.</em>",
+        "heading": "Kleine Rituale. <em>Grosse Wirkung.</em>",
         "color_scheme": "scheme-1"
       },
       "blocks": {
@@ -82,12 +82,12 @@
       "type": "tiburna-story",
       "settings": {
         "fallback": "tiburna-eckig.jpg",
-        "reverse": false,
-        "eyebrow": "Herkunft",
-        "heading": "Ein Stein mit <em>2000 Jahren</em> Geschichte",
-        "text": "<p>Der Name TIBURNA geht auf Tibur zurück – das heutige Tivoli bei Rom. Von dort stammt der «lapis tiburtinus», den wir heute Travertin nennen. Aus ihm wurde schon das Kolosseum erbaut.</p><p>Wir bringen diesen Stein in Ihr Bad: schlicht geformt, sorgfältig verarbeitet und gemacht, um Tag für Tag benutzt zu werden.</p>",
-        "quote": "Jede Pore erzählt, wie der Stein entstanden ist.",
-        "color_scheme": "scheme-3"
+        "reverse": true,
+        "eyebrow": "Ihr tägliches Ritual",
+        "heading": "Der Morgen <em>beginnt im Bad.</em>",
+        "text": "<p>Warmes Wasser, der Duft Ihrer Seife, der erste ruhige Atemzug des Tages. Diese Minuten gehören nur Ihnen.</p><p>TIBURNA macht daraus ein kleines Ritual – mit Stücken aus echtem Travertin, die sich anfühlen wie ein Wochenende im Spa.</p>",
+        "quote": "Luxus ist, sich jeden Tag einen Moment Ruhe zu schenken.",
+        "color_scheme": "scheme-2"
       }
     },
     "featured_collection": {
@@ -137,7 +137,7 @@
         "p": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Erfahren Sie als Erste von neuen Stücken und limitierten Kollektionen.</p>"
+            "text": "<p>Ideen für Ihr Spa zu Hause und als Erste von neuen Stücken erfahren.</p>"
           }
         },
         "f": {
@@ -150,12 +150,25 @@
         "p",
         "f"
       ]
+    },
+    "colosseum": {
+      "type": "tiburna-colosseum",
+      "settings": {
+        "fallback": "",
+        "alt": "Das Kolosseum in Rom, erbaut aus Travertin",
+        "overlay": 45,
+        "eyebrow": "Seit fast 2000 Jahren",
+        "heading": "Der Stein <em>des Kolosseums.</em>",
+        "text": "<p>Der Name TIBURNA geht auf Tibur zurück, das heutige Tivoli bei Rom. Von dort kam der Travertin, aus dem das Kolosseum erbaut wurde – und es steht bis heute. Derselbe Naturstein bringt jetzt diese Ruhe und Beständigkeit in Ihr Bad.</p>",
+        "color_scheme": "scheme-3"
+      }
     }
   },
   "order": [
     "hero",
     "values",
     "duo",
+    "colosseum",
     "story",
     "featured_collection",
     "newsletter"

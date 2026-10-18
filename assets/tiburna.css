@@ -343,6 +343,68 @@ h1, h2, h3, .h0, .h1, .h2, .h3 {
   }
 }
 
+/* ---------- Kolosseum ---------- */
+
+.tib-colo {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 78vh;
+  overflow: hidden;
+}
+
+.tib-colo__media {
+  position: absolute;
+  inset: 0;
+}
+
+.tib-colo__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tib-colo__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(28, 22, 18, calc(var(--tib-overlay, 0.45) + 0.3)) 0%,
+    rgba(28, 22, 18, var(--tib-overlay, 0.45)) 45%,
+    rgba(28, 22, 18, calc(var(--tib-overlay, 0.45) * 0.4)) 100%
+  );
+}
+
+.tib-colo--noimage .tib-colo__overlay {
+  background: radial-gradient(ellipse at 70% 20%, rgba(216, 196, 168, 0.18), transparent 60%);
+}
+
+.tib-colo__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-top: 12rem;
+  padding-bottom: 8rem;
+  color: #F6F1EA;
+}
+
+.tib-colo .tib-heading {
+  font-size: clamp(4.4rem, 7.5vw, 10.4rem);
+  max-width: 12em;
+}
+
+.tib-colo .tib-text {
+  margin-top: 2.8rem;
+  max-width: 52rem;
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 750px) {
+  .tib-colo__content {
+    padding-bottom: 11rem;
+  }
+}
+
 /* Sanftes Einblenden beim Laden */
 @media (prefers-reduced-motion: no-preference) {
   .tib-hero__content > * {
