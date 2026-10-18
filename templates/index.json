@@ -61,17 +61,17 @@
           "type": "item",
           "settings": {
             "fallback": "tiburna-rund.jpg",
-            "title": "Seifenspender Rund",
-            "subtitle": "Travertin hell · Chrom",
-            "link": "shopify://collections/all"
+            "title": "Seifenspender ROMA",
+            "subtitle": "Travertin beige",
+            "link": "shopify://products/seifenspender-roma"
           }
         },
         "d2": {
           "type": "item",
           "settings": {
             "fallback": "tiburna-eckig.jpg",
-            "title": "Seifenspender Eckig",
-            "subtitle": "Travertin dunkel · Schwarz",
+            "title": "Seifenspender TIVOLI",
+            "subtitle": "Naturstein dunkel",
             "link": "shopify://collections/all"
           }
         }
