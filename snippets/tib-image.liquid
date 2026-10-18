@@ -1,0 +1,36 @@
+{% comment %}
+  Zeigt ein Bild aus dem Theme-Editor an.
+  Wenn dort (noch) keins gewählt ist, wird das Ersatzbild aus dem Theme verwendet.
+
+  Parameter:
+  - image: Bild aus dem Bild-Auswahlfeld (optional)
+  - fallback: Dateiname eines Bildes im Ordner assets (z. B. 'tiburna-rund.jpg')
+  - alt: Alternativtext
+  - sizes: sizes-Attribut
+  - eager: true für Bilder ganz oben auf der Seite
+{%- endcomment -%}
+{%- liquid
+  assign loading = 'lazy'
+  if eager
+    assign loading = 'eager'
+  endif
+-%}
+{%- if image != blank -%}
+  {{
+    image
+    | image_url: width: 2400
+    | image_tag:
+      widths: '600, 900, 1200, 1600, 2000, 2400',
+      sizes: sizes,
+      alt: alt,
+      loading: loading
+  }}
+{%- elsif fallback != blank -%}
+  <img
+    src="{{ fallback | asset_url }}"
+    alt="{{ alt | escape }}"
+    width="1122"
+    height="1402"
+    loading="{{ loading }}"
+  >
+{%- endif -%}

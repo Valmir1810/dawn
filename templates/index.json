@@ -1,75 +1,163 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "hero": {
+      "type": "tiburna-hero",
+      "settings": {
+        "fallback": "tiburna-rund.jpg",
+        "eyebrow": "Badaccessoires aus Travertin",
+        "heading": "Die Ruhe <em>des Steins.</em>",
+        "text": "<p>Seifenspender, Zahnbürstenhalter und mehr – geformt aus echtem Travertin. Zeitlose Stücke, die Ihr Bad in einen Ort der Ruhe verwandeln.</p>",
+        "button_label": "Kollektion entdecken",
+        "button_link": "shopify://collections/all",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "values": {
+      "type": "tiburna-values",
+      "settings": {
+        "color_scheme": "scheme-2"
+      },
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "v1": {
+          "type": "value",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "title": "Echter Naturstein",
+            "text": "Jedes Stück entsteht aus massivem Travertin – kein Kunststoff, keine Imitation."
           }
         },
-        "button": {
-          "type": "buttons",
+        "v2": {
+          "type": "value",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "title": "Ein echtes Unikat",
+            "text": "Poren, Adern und Farbnuancen machen jedes Objekt einzigartig. Kein Stück gleicht dem anderen."
+          }
+        },
+        "v3": {
+          "type": "value",
+          "settings": {
+            "title": "Für Jahre gemacht",
+            "text": "Robust, langlebig und mit wenig Pflege über viele Jahre schön."
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
-      ],
+        "v1",
+        "v2",
+        "v3"
+      ]
+    },
+    "duo": {
+      "type": "tiburna-duo",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "eyebrow": "Die Seifenspender",
+        "heading": "Zwei Formen. <em>Ein Stein.</em>",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "d1": {
+          "type": "item",
+          "settings": {
+            "fallback": "tiburna-rund.jpg",
+            "title": "Seifenspender Rund",
+            "subtitle": "Travertin hell · Chrom",
+            "link": "shopify://collections/all"
+          }
+        },
+        "d2": {
+          "type": "item",
+          "settings": {
+            "fallback": "tiburna-eckig.jpg",
+            "title": "Seifenspender Eckig",
+            "subtitle": "Travertin dunkel · Schwarz",
+            "link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "d1",
+        "d2"
+      ]
+    },
+    "story": {
+      "type": "tiburna-story",
+      "settings": {
+        "fallback": "tiburna-eckig.jpg",
+        "reverse": false,
+        "eyebrow": "Herkunft",
+        "heading": "Ein Stein mit <em>2000 Jahren</em> Geschichte",
+        "text": "<p>Der Name TIBURNA geht auf Tibur zurück – das heutige Tivoli bei Rom. Von dort stammt der «lapis tiburtinus», den wir heute Travertin nennen. Aus ihm wurde schon das Kolosseum erbaut.</p><p>Wir bringen diesen Stein in Ihr Bad: schlicht geformt, sorgfältig verarbeitet und gemacht, um Tag für Tag benutzt zu werden.</p>",
+        "quote": "Jede Pore erzählt, wie der Stein entstanden ist.",
+        "color_scheme": "scheme-3"
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
+        "title": "Die Kollektion",
+        "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "swipe_on_mobile": false,
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "padding_top": 80,
+        "padding_bottom": 80
       }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 88
+      },
+      "blocks": {
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Neues von TIBURNA",
+            "heading_size": "h1"
+          }
+        },
+        "p": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Erfahren Sie als Erste von neuen Stücken und limitierten Kollektionen.</p>"
+          }
+        },
+        "f": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "h",
+        "p",
+        "f"
+      ]
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "hero",
+    "values",
+    "duo",
+    "story",
+    "featured_collection",
+    "newsletter"
   ]
 }

@@ -1,0 +1,107 @@
+<section class="tib-duo color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="tib-duo__head">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="tib-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      <h2 class="tib-heading">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="tib-duo__grid">
+      {%- for block in section.blocks -%}
+        <a
+          class="tib-duo__item"
+          {% if block.settings.link != blank %}href="{{ block.settings.link }}"{% endif %}
+          {{ block.shopify_attributes }}
+        >
+          <div class="tib-media">
+            {%- render 'tib-image',
+              image: block.settings.image,
+              fallback: block.settings.fallback,
+              alt: block.settings.title,
+              sizes: '(min-width: 750px) 50vw, 100vw'
+            -%}
+          </div>
+          <div class="tib-duo__caption">
+            <h3 class="tib-duo__title">{{ block.settings.title | escape }}</h3>
+            <span class="tib-duo__sub">{{ block.settings.subtitle | escape }}</span>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "TIBURNA Produktpaar",
+  "tag": "div",
+  "class": "section",
+  "max_blocks": 2,
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Kleine Überschrift",
+      "default": "Die Seifenspender"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Überschrift",
+      "default": "Zwei Formen. <em>Ein Stein.</em>"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Farbschema",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Produkt",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Bild",
+          "info": "Leer lassen, um das Standardbild zu verwenden."
+        },
+        {
+          "type": "text",
+          "id": "fallback",
+          "label": "Standardbild (Dateiname im Theme)",
+          "default": "tiburna-rund.jpg"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titel",
+          "default": "Seifenspender Rund"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Untertitel",
+          "default": "Travertin hell · Chrom"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TIBURNA Produktpaar",
+      "blocks": [
+        { "type": "item" },
+        { "type": "item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

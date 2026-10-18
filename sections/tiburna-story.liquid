@@ -1,0 +1,87 @@
+<section class="tib-story{% if section.settings.reverse %} tib-story--reverse{% endif %} color-{{ section.settings.color_scheme }} gradient">
+  <div class="tib-story__media tib-media">
+    {%- render 'tib-image',
+      image: section.settings.image,
+      fallback: section.settings.fallback,
+      alt: section.settings.heading,
+      sizes: '(min-width: 990px) 50vw, 100vw'
+    -%}
+  </div>
+  <div class="tib-story__content">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="tib-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+    {%- endif -%}
+    <h2 class="tib-heading">{{ section.settings.heading }}</h2>
+    <hr class="tib-rule">
+    {%- if section.settings.text != blank -%}
+      <div class="tib-text">{{ section.settings.text }}</div>
+    {%- endif -%}
+    {%- if section.settings.quote != blank -%}
+      <hr class="tib-rule">
+      <p class="tib-story__quote">{{ section.settings.quote | escape }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "TIBURNA Geschichte",
+  "tag": "div",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Bild",
+      "info": "Leer lassen, um das Standardbild zu verwenden."
+    },
+    {
+      "type": "text",
+      "id": "fallback",
+      "label": "Standardbild (Dateiname im Theme)",
+      "default": "tiburna-eckig.jpg"
+    },
+    {
+      "type": "checkbox",
+      "id": "reverse",
+      "label": "Bild rechts anzeigen",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Kleine Überschrift",
+      "default": "Herkunft"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Überschrift",
+      "default": "Ein Stein mit <em>2000 Jahren</em> Geschichte"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Der Name TIBURNA geht auf Tibur zurück – das heutige Tivoli bei Rom. Von dort stammt der «lapis tiburtinus», den wir heute Travertin nennen. Aus ihm wurde schon das Kolosseum erbaut.</p><p>Wir bringen diesen Stein in Ihr Bad: schlicht geformt, sorgfältig verarbeitet und gemacht, um Tag für Tag benutzt zu werden.</p>"
+    },
+    {
+      "type": "text",
+      "id": "quote",
+      "label": "Zitat",
+      "default": "Jede Pore erzählt, wie der Stein entstanden ist."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Farbschema",
+      "default": "scheme-3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TIBURNA Geschichte"
+    }
+  ]
+}
+{% endschema %}

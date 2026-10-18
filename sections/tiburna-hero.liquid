@@ -1,0 +1,97 @@
+<section class="tib-hero color-{{ section.settings.color_scheme }} gradient">
+  <div class="tib-hero__content">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="tib-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+    {%- endif -%}
+    <h1 class="tib-heading">{{ section.settings.heading }}</h1>
+    {%- if section.settings.text != blank -%}
+      <div class="tib-text">{{ section.settings.text }}</div>
+    {%- endif -%}
+    {%- if section.settings.button_label != blank -%}
+      <div class="tib-hero__actions">
+        <a
+          class="button button--primary"
+          {% if section.settings.button_link != blank %}
+            href="{{ section.settings.button_link }}"
+          {% else %}
+            role="link" aria-disabled="true"
+          {% endif %}
+        >
+          {{- section.settings.button_label | escape -}}
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+  <div class="tib-hero__media tib-media">
+    {%- render 'tib-image',
+      image: section.settings.image,
+      fallback: section.settings.fallback,
+      alt: section.settings.heading,
+      sizes: '(min-width: 990px) 50vw, 100vw',
+      eager: true
+    -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "TIBURNA Hero",
+  "tag": "div",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Bild",
+      "info": "Leer lassen, um das Standardbild zu verwenden."
+    },
+    {
+      "type": "text",
+      "id": "fallback",
+      "label": "Standardbild (Dateiname im Theme)",
+      "default": "tiburna-rund.jpg"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Kleine Überschrift",
+      "default": "Badaccessoires aus Travertin"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Überschrift",
+      "default": "Die Ruhe <em>des Steins.</em>"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Seifenspender, Zahnbürstenhalter und mehr – geformt aus echtem Travertin. Zeitlose Stücke, die Ihr Bad in einen Ort der Ruhe verwandeln.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button-Text",
+      "default": "Kollektion entdecken"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button-Link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Farbschema",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TIBURNA Hero"
+    }
+  ]
+}
+{% endschema %}

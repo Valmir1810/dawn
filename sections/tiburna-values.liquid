@@ -1,0 +1,60 @@
+<section class="tib-values color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="tib-values__grid">
+      {%- for block in section.blocks -%}
+        <div class="tib-value" {{ block.shopify_attributes }}>
+          <span class="tib-value__num">{{ forloop.index | prepend: '0' }}</span>
+          <h3 class="tib-value__title">{{ block.settings.title | escape }}</h3>
+          <p class="tib-value__text">{{ block.settings.text | escape }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "TIBURNA Werte",
+  "tag": "div",
+  "class": "section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Farbschema",
+      "default": "scheme-2"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "value",
+      "name": "Wert",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titel",
+          "default": "Echter Naturstein"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Jedes Stück entsteht aus massivem Travertin – kein Kunststoff, keine Imitation."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TIBURNA Werte",
+      "blocks": [
+        { "type": "value" },
+        { "type": "value" },
+        { "type": "value" }
+      ]
+    }
+  ]
+}
+{% endschema %}
