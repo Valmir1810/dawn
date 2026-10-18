@@ -1,4 +1,4 @@
-<section class="tib-hero color-{{ section.settings.color_scheme }} gradient">
+<section class="tib-hero{% if section.settings.layout == 'full' %} tib-hero--full{% endif %} color-{{ section.settings.color_scheme }} gradient">
   <div class="tib-hero__content">
     {%- if section.settings.eyebrow != blank -%}
       <p class="tib-eyebrow">{{ section.settings.eyebrow | escape }}</p>
@@ -24,14 +24,37 @@
     {%- endif -%}
   </div>
   <div class="tib-hero__media tib-media">
-    {%- render 'tib-image',
-      image: section.settings.image,
-      fallback: section.settings.fallback,
-      alt: section.settings.heading,
-      sizes: '(min-width: 990px) 50vw, 100vw',
-      eager: true
-    -%}
+    {%- if section.settings.video != blank -%}
+      {{
+        section.settings.video
+        | video_tag:
+          autoplay: true,
+          loop: true,
+          muted: true,
+          playsinline: true,
+          controls: false,
+          preload: 'auto',
+          image_size: '2400x'
+      }}
+    {%- else -%}
+      {%- liquid
+        assign media_sizes = '(min-width: 990px) 50vw, 100vw'
+        if section.settings.layout == 'full'
+          assign media_sizes = '100vw'
+        endif
+      -%}
+      {%- render 'tib-image',
+        image: section.settings.image,
+        fallback: section.settings.fallback,
+        alt: section.settings.alt,
+        sizes: media_sizes,
+        eager: true
+      -%}
+    {%- endif -%}
   </div>
+  {%- if section.settings.layout == 'full' -%}
+    <div class="tib-hero__shade" style="--tib-overlay: {{ section.settings.overlay | divided_by: 100.0 }};"></div>
+  {%- endif -%}
 </section>
 
 {% schema %}
@@ -40,6 +63,38 @@
   "tag": "div",
   "class": "section",
   "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Aufteilung",
+      "options": [
+        { "value": "full", "label": "Vollbild (Bild hinter dem Text)" },
+        { "value": "split", "label": "Geteilt (Text links, Bild rechts)" }
+      ],
+      "default": "full"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video (optional)",
+      "info": "Wenn ein Video gewählt ist, wird es statt des Bildes gezeigt – ohne Ton, in Endlosschleife."
+    },
+    {
+      "type": "range",
+      "id": "overlay",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "unit": "%",
+      "label": "Abdunklung links (nur Vollbild)",
+      "default": 55
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "Bildbeschreibung",
+      "default": "Spa-Badezimmer aus Travertin im warmen Abendlicht"
+    },
     {
       "type": "image_picker",
       "id": "image",

@@ -583,3 +583,84 @@ h1, h2, h3, .h0, .h1, .h2, .h3 {
 .section-header .header-wrapper.color-scheme-3 {
   border-bottom-color: rgba(216, 196, 168, 0.15);
 }
+
+/* ---------- Hero als Vollbild ---------- */
+
+.tib-hero--full {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.tib-hero.tib-hero--full {
+  background: #1f1915;
+}
+
+.tib-hero--full .tib-hero__media {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: auto;
+  height: 100%;
+}
+
+.tib-hero--full .tib-hero__media img,
+.tib-hero--full .tib-hero__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% center;
+}
+
+.tib-hero.tib-hero--full .tib-hero__media::after {
+  display: none;
+}
+
+.tib-hero__shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg,
+      rgba(31, 24, 19, calc(var(--tib-overlay, 0.55) + 0.25)) 0%,
+      rgba(31, 24, 19, var(--tib-overlay, 0.55)) 35%,
+      rgba(31, 24, 19, 0) 70%),
+    linear-gradient(0deg, rgba(31, 24, 19, 0.45) 0%, transparent 30%);
+}
+
+.tib-hero--full .tib-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 72rem;
+  padding: 14rem 2rem 8rem;
+}
+
+.tib-hero--full .tib-heading,
+.tib-hero--full .tib-text {
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 989px) {
+  .tib-hero--full {
+    align-items: flex-end;
+  }
+
+  .tib-hero--full .tib-hero__media img,
+  .tib-hero--full .tib-hero__media video {
+    object-position: 70% center;
+  }
+
+  .tib-hero__shade {
+    background: linear-gradient(180deg,
+      rgba(31, 24, 19, 0.25) 0%,
+      rgba(31, 24, 19, 0.55) 45%,
+      rgba(31, 24, 19, 0.88) 100%);
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .tib-hero--full .tib-hero__content {
+    padding: 14rem 0 10rem max(5rem, calc((100vw - var(--page-width)) / 2 + 5rem));
+  }
+}
