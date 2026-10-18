@@ -664,3 +664,9 @@ h1, h2, h3, .h0, .h1, .h2, .h3 {
     padding: 14rem 0 10rem max(5rem, calc((100vw - var(--page-width)) / 2 + 5rem));
   }
 }
+
+/* Dawn blendet leere <div>s aus – die Abdunklungen brauchen wir aber */
+.tib-colo__overlay:empty,
+.tib-hero__shade:empty {
+  display: block !important;
+}
