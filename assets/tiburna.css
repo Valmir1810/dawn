@@ -670,3 +670,69 @@ h1, h2, h3, .h0, .h1, .h2, .h3 {
 .tib-hero__shade:empty {
   display: block !important;
 }
+
+/* ---------- Wortmarke TIBURNA ---------- */
+
+.tib-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1;
+}
+
+.tib-wordmark__text {
+  font-family: 'Cinzel', 'Trajan Pro', 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 2.4rem;
+  letter-spacing: 0.38em;
+  margin-right: -0.38em; /* gleicht die Sperrung am Ende aus */
+  text-transform: uppercase;
+  background: linear-gradient(105deg,
+    #a8834f 0%, #d9bd8a 22%, #f6e7c4 32%, #fffaf0 36%, #f6e7c4 40%,
+    #d9bd8a 52%, #b8925a 75%, #d9bd8a 100%);
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.25));
+}
+
+.tib-wordmark__line {
+  display: block;
+  width: 3.2rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a974);
+}
+
+.tib-wordmark__line--right {
+  background: linear-gradient(90deg, #c9a974, transparent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tib-wordmark__text {
+    animation: tib-shine 7s ease-in-out infinite;
+  }
+}
+
+@keyframes tib-shine {
+  0%, 55% { background-position: 100% 0; }
+  85%, 100% { background-position: 0% 0; }
+}
+
+@media screen and (min-width: 990px) {
+  .tib-wordmark__text { font-size: 3rem; }
+  .tib-wordmark__line { width: 5.6rem; }
+}
+
+@media screen and (max-width: 749px) {
+  .tib-wordmark { gap: 1rem; }
+  .tib-wordmark__text { font-size: 2rem; letter-spacing: 0.3em; margin-right: -0.3em; }
+  .tib-wordmark__line { width: 1.8rem; }
+}
+
+/* Kein "Mit Shop kaufen" / Express-Buttons im Warenkorb */
+.cart__dynamic-checkout-buttons,
+.additional-checkout-buttons {
+  display: none !important;
+}
