@@ -736,3 +736,71 @@ h1, h2, h3, .h0, .h1, .h2, .h3 {
 .additional-checkout-buttons {
   display: none !important;
 }
+
+/* ---------- Hero: Text oben in der Mitte (Nachthimmel) ---------- */
+
+.tib-hero--top {
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+}
+
+.tib-hero--top .tib-hero__content {
+  margin: 0 auto;
+  max-width: 96rem;
+  align-items: center;
+  padding: 7vh 2rem 0;
+}
+
+@media screen and (min-width: 990px) {
+  .tib-hero--top .tib-hero__content {
+    padding: 7vh 2rem 0;
+  }
+}
+
+.tib-hero--top .tib-heading {
+  font-size: clamp(4.4rem, 6.4vw, 9.2rem);
+}
+
+.tib-hero--top .tib-heading em {
+  display: inline;
+}
+
+.tib-hero--top .tib-goldline {
+  margin: 2.8rem auto 0;
+  background: linear-gradient(90deg, transparent, #D8C4A8, transparent);
+}
+
+.tib-hero--top .tib-text {
+  margin: 2.4rem auto 0;
+  max-width: 56rem;
+}
+
+.tib-hero--top .tib-hero__actions {
+  margin-top: 3.2rem;
+}
+
+.tib-hero--top .tib-hero__media img,
+.tib-hero--top .tib-hero__media video {
+  object-position: center 60%;
+}
+
+.tib-hero--top .tib-hero__shade {
+  background:
+    linear-gradient(180deg,
+      rgba(8, 12, 22, calc(var(--tib-overlay, 0.5) + 0.2)) 0%,
+      rgba(8, 12, 22, var(--tib-overlay, 0.5)) 25%,
+      rgba(8, 12, 22, 0) 55%),
+    linear-gradient(0deg, rgba(20, 15, 12, 0.35) 0%, transparent 25%);
+}
+
+@media screen and (min-width: 990px) {
+  .tib-hero--top .tib-hero__content { padding-top: 5vh; }
+  .tib-hero--top .tib-heading {
+    font-size: clamp(4.8rem, 5.2vw, 8rem);
+    white-space: nowrap;
+  }
+  .tib-hero--top .tib-goldline { margin-top: 2rem; }
+  .tib-hero--top .tib-text { margin-top: 1.6rem; }
+  .tib-hero--top .tib-hero__actions { margin-top: 2.4rem; }
+}

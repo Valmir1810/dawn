@@ -3,16 +3,17 @@
     "hero": {
       "type": "tiburna-hero",
       "settings": {
-        "fallback": "tiburna-spa-bad.jpg",
-        "eyebrow": "Travertin · Für Ihr Bad",
-        "heading": "Ihr Bad. <em>Ihr Spa.</em>",
-        "text": "<p>Warmer Naturstein, sanftes Licht, ein Moment nur für Sie. Mit TIBURNA wird jeder Morgen zu einer kleinen Auszeit – wie im Spa, jeden Tag bei Ihnen zu Hause.</p>",
-        "button_label": "Das Spa-Gefühl entdecken",
+        "fallback": "tiburna-kolosseum-nacht.jpg",
+        "eyebrow": "Travertin · Der Stein des Kolosseums",
+        "heading": "Gebaut für <em>die Ewigkeit.</em>",
+        "text": "<p>Badaccessoires aus echtem Naturstein – für Ihr Spa zu Hause.</p>",
+        "button_label": "Kollektion entdecken",
         "button_link": "shopify://collections/all",
         "color_scheme": "scheme-3",
         "layout": "full",
-        "overlay": 55,
-        "alt": "Spa-Badezimmer aus Travertin im warmen Abendlicht"
+        "overlay": 50,
+        "alt": "Die TIBURNA-Sets aus Travertin bei Nacht im Kolosseum in Rom",
+        "content_position": "top"
       }
     },
     "values": {
@@ -157,14 +158,14 @@
     "colosseum": {
       "type": "tiburna-colosseum",
       "settings": {
-        "fallback": "tiburna-kolosseum.jpg",
-        "alt": "Das Kolosseum in Rom, erbaut aus Travertin",
-        "overlay": 55,
-        "eyebrow": "Rom · 80 n. Chr.",
-        "heading": "Gebaut für <em>die Ewigkeit.</em>",
-        "text": "<p>Das Kolosseum wurde aus Travertin errichtet. Kaiser kamen und gingen, Imperien zerfielen – der Stein blieb. Seit fast 2000 Jahren.</p><p>Heute holen Sie diesen legendären Stein zu sich nach Hause.</p>",
-        "inset_fallback": "tiburna-rund.jpg",
-        "inset_caption": "Derselbe Stein. <em>In Ihrem Bad.</em>",
+        "fallback": "tiburna-spa-bad.jpg",
+        "alt": "Spa-Badezimmer aus Travertin im warmen Morgenlicht",
+        "overlay": 45,
+        "eyebrow": "Für Ihr Zuhause",
+        "heading": "Ihr Bad. <em>Ihr Spa.</em>",
+        "text": "<p>Warmer Naturstein, sanftes Licht, ein Moment nur für Sie. Mit TIBURNA wird jeder Morgen zu einer kleinen Auszeit – wie im Spa, jeden Tag bei Ihnen zu Hause.</p>",
+        "inset_fallback": "set-roma-rund.jpg",
+        "inset_caption": "Das Set ROMA. <em>Ihr tägliches Ritual.</em>",
         "color_scheme": "scheme-3"
       }
     }

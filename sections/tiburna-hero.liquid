@@ -1,4 +1,4 @@
-<section class="tib-hero{% if section.settings.layout == 'full' %} tib-hero--full{% endif %} color-{{ section.settings.color_scheme }} gradient">
+<section class="tib-hero{% if section.settings.layout == 'full' %} tib-hero--full{% endif %}{% if section.settings.content_position == 'top' %} tib-hero--top{% endif %} color-{{ section.settings.color_scheme }} gradient">
   <div class="tib-hero__content">
     {%- if section.settings.eyebrow != blank -%}
       <p class="tib-eyebrow">{{ section.settings.eyebrow | escape }}</p>
@@ -72,6 +72,16 @@
         { "value": "split", "label": "Geteilt (Text links, Bild rechts)" }
       ],
       "default": "full"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Position des Textes (nur Vollbild)",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "top", "label": "Oben in der Mitte" }
+      ],
+      "default": "left"
     },
     {
       "type": "video",
