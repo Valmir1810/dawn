@@ -804,3 +804,117 @@ h1, h2, h3, .h0, .h1, .h2, .h3 {
   .tib-hero--top .tib-text { margin-top: 1.6rem; }
   .tib-hero--top .tib-hero__actions { margin-top: 2.4rem; }
 }
+
+/* ---------- Warteliste / Vormerk-Modus ---------- */
+
+.tib-waitlist-mode .product-form__buttons,
+.tib-waitlist-mode .product-form__quantity,
+.tib-waitlist-mode .price__badge-sold-out,
+.tib-waitlist-mode .card__badge .badge,
+.tib-waitlist-mode quick-add-modal,
+.tib-waitlist-mode .quick-add {
+  display: none !important;
+}
+
+/* Varianten nicht durchgestrichen anzeigen */
+.tib-waitlist-mode .product-form__input--pill input[type='radio'].disabled + label,
+.tib-waitlist-mode .product-form__input--pill input[type='radio']:disabled + label {
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+  border-color: rgba(var(--color-foreground), 0.55);
+}
+.tib-waitlist-mode .product-form__input--pill input[type='radio'].disabled:checked + label,
+.tib-waitlist-mode .product-form__input--pill input[type='radio']:disabled:checked + label {
+  color: rgb(var(--color-background));
+  background-color: rgb(var(--color-foreground));
+}
+.tib-waitlist-mode .product-form__input input[type='radio'] + label > .label-unavailable {
+  display: none;
+}
+
+.tib-waitlist {
+  margin: 2.4rem 0 1.6rem;
+  padding: 2.8rem 2.4rem;
+  border: 1px solid rgba(var(--color-foreground), 0.15);
+  background: rgba(var(--color-foreground), 0.03);
+}
+
+.tib-waitlist__eyebrow {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.tib-waitlist__text {
+  margin: 0 0 2rem;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.tib-waitlist__form {
+  display: block;
+}
+
+.tib-waitlist__input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 5rem;
+  padding: 0 1.6rem;
+  margin-bottom: 1.2rem;
+  font: inherit;
+  font-size: 1.5rem;
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
+  border: 1px solid rgba(var(--color-foreground), 0.35);
+  border-radius: 0;
+}
+
+.tib-waitlist__input:focus {
+  outline: 1px solid rgb(var(--color-foreground));
+  outline-offset: 0;
+}
+
+.tib-waitlist__button {
+  width: 100%;
+}
+
+.tib-waitlist__note {
+  margin: 1.4rem 0 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.65;
+}
+
+.tib-waitlist__error {
+  margin: 1rem 0 0;
+  color: #9b3b2a;
+  font-size: 1.3rem;
+}
+
+.tib-waitlist__success {
+  display: flex;
+  gap: 1.4rem;
+  align-items: flex-start;
+}
+
+.tib-waitlist__success p {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.tib-waitlist__check {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+  font-size: 1.6rem;
+}

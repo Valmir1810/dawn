@@ -1466,5 +1466,44 @@
         "label": "t:settings_schema.customer_accounts.settings.customer_account_menu.label"
       }
     ]
+  },
+  {
+    "name": "TIBURNA Warteliste",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Im Vormerk-Modus kann niemand kaufen. Statt „In den Warenkorb“ erscheint „Jetzt vormerken“. Wer sich vormerkt, erscheint unter Kunden mit dem Tag „vormerkung“ und dem Produkt."
+      },
+      {
+        "type": "checkbox",
+        "id": "tib_waitlist",
+        "label": "Vormerk-Modus aktiv",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "tib_waitlist_button",
+        "label": "Text auf dem Knopf",
+        "default": "Jetzt vormerken"
+      },
+      {
+        "type": "text",
+        "id": "tib_waitlist_heading",
+        "label": "Überschrift",
+        "default": "Bald erhältlich"
+      },
+      {
+        "type": "textarea",
+        "id": "tib_waitlist_text",
+        "label": "Text",
+        "default": "Unsere erste Kollektion entsteht gerade. Merken Sie sich Ihr Wunschprodukt vor – wir informieren Sie als Erste, sobald es verfügbar ist. Unverbindlich und kostenlos."
+      },
+      {
+        "type": "text",
+        "id": "tib_waitlist_success",
+        "label": "Danke-Text",
+        "default": "Vielen Dank! Wir melden uns, sobald Ihr Wunschprodukt verfügbar ist."
+      }
+    ]
   }
 ]

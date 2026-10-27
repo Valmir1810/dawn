@@ -1,0 +1,73 @@
+{% comment %}
+  TIBURNA Warteliste ("Jetzt vormerken")
+  Statt zu kaufen hinterlässt der Kunde seine E-Mail-Adresse.
+  Er wird in Shopify als Kunde gespeichert, mit den Tags:
+  - vormerkung
+  - vm: <Produkt>
+  - vm: <Produkt> – <Variante>
+{% endcomment %}
+{%- assign tib_form_id = 'TibWaitlist-' | append: product.id -%}
+{%- assign tib_variant = product.selected_or_first_available_variant -%}
+<div class="tib-waitlist" data-tib-waitlist>
+  {%- form 'customer', id: tib_form_id, class: 'tib-waitlist__form' -%}
+    {%- if form.posted_successfully? -%}
+      <div class="tib-waitlist__success" role="status">
+        <span class="tib-waitlist__check" aria-hidden="true">✓</span>
+        <p>{{ settings.tib_waitlist_success | escape }}</p>
+      </div>
+    {%- else -%}
+      <p class="tib-waitlist__eyebrow">{{ settings.tib_waitlist_heading | escape }}</p>
+      <p class="tib-waitlist__text">{{ settings.tib_waitlist_text | escape }}</p>
+      <input
+        type="hidden"
+        name="contact[tags]"
+        value="vormerkung, vm: {{ product.title | escape }}, vm: {{ product.title | escape }} – {{ tib_variant.title | escape }}"
+        data-tib-tags
+      >
+      <label class="visually-hidden" for="{{ tib_form_id }}-email">E-Mail-Adresse</label>
+      <input
+        id="{{ tib_form_id }}-email"
+        class="tib-waitlist__input"
+        type="email"
+        name="contact[email]"
+        placeholder="Ihre E-Mail-Adresse"
+        autocomplete="email"
+        required
+      >
+      <button type="submit" class="button button--primary tib-waitlist__button">
+        {{- settings.tib_waitlist_button | escape -}}
+      </button>
+      {%- if form.errors -%}
+        <p class="tib-waitlist__error">Bitte prüfen Sie Ihre E-Mail-Adresse.</p>
+      {%- endif -%}
+      <p class="tib-waitlist__note">
+        Mit dem Vormerken erhalten Sie von uns eine E-Mail, sobald das Produkt verfügbar ist, sowie gelegentlich Neuigkeiten von TIBURNA. Abmeldung jederzeit möglich.
+      </p>
+    {%- endif -%}
+  {%- endform -%}
+</div>
+<script type="application/json" data-tib-variants>
+  {
+    {%- for v in product.variants -%}
+      "{{ v.id }}": {{ v.title | json }}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  }
+</script>
+<script>
+  (function () {
+    var root = document.currentScript.previousElementSibling.previousElementSibling;
+    var map = JSON.parse(document.currentScript.previousElementSibling.textContent);
+    var title = {{ product.title | json }};
+    var form = root.querySelector('form');
+    if (!form) return;
+    form.addEventListener('submit', function () {
+      var section = root.closest('section') || document;
+      var idInput = section.querySelector('form[action*="/cart/add"] input[name="id"]');
+      var vTitle = idInput && map[idInput.value];
+      var tags = form.querySelector('[data-tib-tags]');
+      if (tags && vTitle) {
+        tags.value = 'vormerkung, vm: ' + title + ', vm: ' + title + ' – ' + vTitle;
+      }
+    });
+  })();
+</script>
