@@ -918,3 +918,10 @@ h1, h2, h3, .h0, .h1, .h2, .h3 {
   color: rgb(var(--color-background));
   font-size: 1.6rem;
 }
+
+/* Header: nur Warenkorb-Symbol anzeigen (keine Suche, kein Kundenkonto) */
+.header .header__search,
+.header .header__icon--account,
+.menu-drawer .menu-drawer__account {
+  display: none !important;
+}
