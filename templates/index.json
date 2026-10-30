@@ -183,10 +183,53 @@
         "inset_caption": "Travertin. <em>Jetzt in Ihrem Bad.</em>",
         "color_scheme": "scheme-3"
       }
+    },
+    "trust": {
+      "type": "tiburna-trust",
+      "settings": {
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "t1": {
+          "type": "item",
+          "settings": {
+            "icon": "swiss",
+            "text": "Versand aus der Schweiz"
+          }
+        },
+        "t2": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "text": "Gratis Versand ab CHF 100"
+          }
+        },
+        "t3": {
+          "type": "item",
+          "settings": {
+            "icon": "return",
+            "text": "30 Tage Rückgabe"
+          }
+        },
+        "t4": {
+          "type": "item",
+          "settings": {
+            "icon": "card",
+            "text": "Sicher bezahlen mit Karte"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ]
     }
   },
   "order": [
     "hero",
+    "trust",
     "values",
     "rom",
     "story",

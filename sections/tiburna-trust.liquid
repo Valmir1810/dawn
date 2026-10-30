@@ -1,0 +1,77 @@
+<section class="tib-trust color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <ul class="tib-trust__list" role="list">
+      {%- for block in section.blocks -%}
+        <li class="tib-trust__item" {{ block.shopify_attributes }}>
+          <span class="tib-trust__icon" aria-hidden="true">
+            {%- case block.settings.icon -%}
+              {%- when 'swiss' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 7.5v9M7.5 12h9" stroke-width="2.2"/></svg>
+              {%- when 'truck' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M2.5 6.5h11v9h-11zM13.5 9.5h4l3 3v3h-7z"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+              {%- when 'return' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h11a5 5 0 0 1 0 10H8"/><path d="M8 5 4 9l4 4"/></svg>
+              {%- when 'card' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 9.5h19M6 15h4"/></svg>
+            {%- endcase -%}
+          </span>
+          <span class="tib-trust__text">{{ block.settings.text | escape }}</span>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "TIBURNA Vertrauen",
+  "tag": "div",
+  "class": "section",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Farbschema",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Punkt",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Symbol",
+          "options": [
+            { "value": "swiss", "label": "Schweizer Kreuz" },
+            { "value": "truck", "label": "Lieferwagen" },
+            { "value": "return", "label": "Rückgabe-Pfeil" },
+            { "value": "card", "label": "Karte" }
+          ],
+          "default": "swiss"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Versand aus der Schweiz"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TIBURNA Vertrauen",
+      "blocks": [
+        { "type": "item", "settings": { "icon": "swiss", "text": "Versand aus der Schweiz" } },
+        { "type": "item", "settings": { "icon": "truck", "text": "Gratis Versand ab CHF 100" } },
+        { "type": "item", "settings": { "icon": "return", "text": "30 Tage Rückgabe" } },
+        { "type": "item", "settings": { "icon": "card", "text": "Sicher bezahlen mit Karte" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
