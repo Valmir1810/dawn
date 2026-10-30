@@ -80,7 +80,8 @@
       "block_order": [
         "d1",
         "d2"
-      ]
+      ],
+      "disabled": true
     },
     "story": {
       "type": "tiburna-story",
@@ -168,14 +169,29 @@
         "inset_caption": "Das Set ROMA. <em>Ihr tägliches Ritual.</em>",
         "color_scheme": "scheme-3"
       }
+    },
+    "rom": {
+      "type": "tiburna-colosseum",
+      "settings": {
+        "fallback": "tiburna-kolosseum.jpg",
+        "alt": "Das Kolosseum in Rom im warmen Abendlicht",
+        "overlay": 50,
+        "eyebrow": "Rom · 80 n. Chr.",
+        "heading": "Gebaut für <em>die Ewigkeit.</em>",
+        "text": "<p>Für das Kolosseum verbauten die Römer über 100'000 Kubikmeter Travertin – aus den Steinbrüchen von Tibur, dem heutigen Tivoli. Kaiser kamen und gingen, der Stein blieb. Seit fast 2000 Jahren.</p><p>Heute holen Sie diesen legendären Naturstein zu sich nach Hause.</p>",
+        "inset_fallback": "tiburna-rund.jpg",
+        "inset_caption": "Travertin. <em>Jetzt in Ihrem Bad.</em>",
+        "color_scheme": "scheme-3"
+      }
     }
   },
   "order": [
     "hero",
     "values",
+    "rom",
+    "story",
     "duo",
     "colosseum",
-    "story",
     "featured_collection",
     "newsletter"
   ]
