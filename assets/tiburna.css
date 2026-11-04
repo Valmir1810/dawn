@@ -973,3 +973,13 @@ h1, h2, h3, .h0, .h1, .h2, .h3 {
     gap: 0.8rem;
   }
 }
+
+/* Startbild: eigenes Hochformat-Bild auf dem Handy */
+.tib-hero__picture {
+  display: contents;
+}
+@media screen and (max-width: 749px) {
+  .tib-hero--full .tib-hero__picture--mobile img {
+    object-position: center center;
+  }
+}

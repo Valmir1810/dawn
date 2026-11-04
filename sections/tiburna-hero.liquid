@@ -43,13 +43,26 @@
           assign media_sizes = '100vw'
         endif
       -%}
-      {%- render 'tib-image',
-        image: section.settings.image,
-        fallback: section.settings.fallback,
-        alt: section.settings.alt,
-        sizes: media_sizes,
-        eager: true
+      {%- liquid
+        assign mobile_src = blank
+        if section.settings.mobile_image != blank
+          assign mobile_src = section.settings.mobile_image | image_url: width: 1440
+        elsif section.settings.mobile_fallback != blank
+          assign mobile_src = section.settings.mobile_fallback | asset_url
+        endif
       -%}
+      <picture class="tib-hero__picture{% if mobile_src != blank %} tib-hero__picture--mobile{% endif %}">
+        {%- if mobile_src != blank -%}
+          <source media="(max-width: 749px)" srcset="{{ mobile_src }}">
+        {%- endif -%}
+        {%- render 'tib-image',
+          image: section.settings.image,
+          fallback: section.settings.fallback,
+          alt: section.settings.alt,
+          sizes: media_sizes,
+          eager: true
+        -%}
+      </picture>
     {%- endif -%}
   </div>
   {%- if section.settings.layout == 'full' -%}
@@ -116,6 +129,18 @@
       "id": "fallback",
       "label": "Standardbild (Dateiname im Theme)",
       "default": "tiburna-rund.jpg"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Bild fürs Handy (optional)",
+      "info": "Hochformat. Wird nur auf Handys gezeigt, Computer und Laptop behalten das Bild oben."
+    },
+    {
+      "type": "text",
+      "id": "mobile_fallback",
+      "label": "Standardbild fürs Handy (Dateiname im Theme)",
+      "default": ""
     },
     {
       "type": "text",
