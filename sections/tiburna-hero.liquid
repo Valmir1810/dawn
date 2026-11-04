@@ -1,4 +1,14 @@
-<section class="tib-hero{% if section.settings.layout == 'full' %} tib-hero--full{% endif %}{% if section.settings.content_position == 'top' %} tib-hero--top{% endif %} color-{{ section.settings.color_scheme }} gradient">
+{%- liquid
+  assign mobile_src = blank
+  if section.settings.video == blank
+    if section.settings.mobile_image != blank
+      assign mobile_src = section.settings.mobile_image | image_url: width: 1440
+    elsif section.settings.mobile_fallback != blank
+      assign mobile_src = section.settings.mobile_fallback | asset_url
+    endif
+  endif
+-%}
+<section class="tib-hero{% if section.settings.layout == 'full' %} tib-hero--full{% endif %}{% if mobile_src != blank %} tib-hero--has-mobile{% endif %}{% if section.settings.content_position == 'top' %} tib-hero--top{% endif %} color-{{ section.settings.color_scheme }} gradient">
   <div class="tib-hero__content">
     {%- if section.settings.eyebrow != blank -%}
       <p class="tib-eyebrow">{{ section.settings.eyebrow | escape }}</p>
@@ -41,14 +51,6 @@
         assign media_sizes = '(min-width: 990px) 50vw, 100vw'
         if section.settings.layout == 'full'
           assign media_sizes = '100vw'
-        endif
-      -%}
-      {%- liquid
-        assign mobile_src = blank
-        if section.settings.mobile_image != blank
-          assign mobile_src = section.settings.mobile_image | image_url: width: 1440
-        elsif section.settings.mobile_fallback != blank
-          assign mobile_src = section.settings.mobile_fallback | asset_url
         endif
       -%}
       <picture class="tib-hero__picture{% if mobile_src != blank %} tib-hero__picture--mobile{% endif %}">
