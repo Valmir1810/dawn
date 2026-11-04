@@ -17,7 +17,6 @@
         "overlay": 50,
         "alt": "Die TIBURNA-Sets aus Travertin bei Nacht im Kolosseum in Rom",
         "fallback": "tiburna-kolosseum-nacht.jpg",
-        "mobile_fallback": "tiburna-kolosseum-nacht-mobil.jpg",
         "eyebrow": "Travertin · Der Stein des Kolosseums",
         "heading": "Ruhe, <em>in Stein gemeisselt.</em>",
         "text": "<p>Badaccessoires aus Travertin – dem Stein Roms. Für Ihre tägliche Auszeit.</p>",
@@ -47,7 +46,7 @@
           "type": "item",
           "settings": {
             "icon": "return",
-            "text": "30 Tage Rückgabe"
+            "text": "14 Tage Rückgabe"
           }
         },
         "t4": {
