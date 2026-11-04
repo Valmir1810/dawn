@@ -1,194 +1,32 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "tiburna-hero",
       "settings": {
+        "layout": "full",
+        "content_position": "top",
+        "overlay": 50,
+        "alt": "Die TIBURNA-Sets aus Travertin bei Nacht im Kolosseum in Rom",
         "fallback": "tiburna-kolosseum-nacht.jpg",
         "eyebrow": "Travertin · Der Stein des Kolosseums",
         "heading": "Ruhe, <em>in Stein gemeisselt.</em>",
         "text": "<p>Badaccessoires aus Travertin – dem Stein Roms. Für Ihre tägliche Auszeit.</p>",
         "button_label": "Kollektion entdecken",
         "button_link": "shopify://collections/all",
-        "color_scheme": "scheme-3",
-        "layout": "full",
-        "overlay": 50,
-        "alt": "Die TIBURNA-Sets aus Travertin bei Nacht im Kolosseum in Rom",
-        "content_position": "top"
-      }
-    },
-    "values": {
-      "type": "tiburna-values",
-      "settings": {
-        "color_scheme": "scheme-2"
-      },
-      "blocks": {
-        "v1": {
-          "type": "value",
-          "settings": {
-            "title": "Wie im Hotel-Spa",
-            "text": "Travertin kennt man aus edlen Thermen und Spas. Jetzt steht er bei Ihnen am Waschtisch."
-          }
-        },
-        "v2": {
-          "type": "value",
-          "settings": {
-            "title": "Ruhe, die man spürt",
-            "text": "Kühl in der Hand, warm im Ton. Naturstein bringt Gelassenheit in jeden Morgen und jeden Abend."
-          }
-        },
-        "v3": {
-          "type": "value",
-          "settings": {
-            "title": "Jedes Stück ein Unikat",
-            "text": "Poren, Adern und Farbnuancen machen jedes Objekt einzigartig. Kein Stück gleicht dem anderen."
-          }
-        }
-      },
-      "block_order": [
-        "v1",
-        "v2",
-        "v3"
-      ]
-    },
-    "duo": {
-      "type": "tiburna-duo",
-      "settings": {
-        "eyebrow": "Die Seifenspender",
-        "heading": "Kleine Rituale. <em>Grosse Wirkung.</em>",
-        "color_scheme": "scheme-1"
-      },
-      "blocks": {
-        "d1": {
-          "type": "item",
-          "settings": {
-            "fallback": "tiburna-rund.jpg",
-            "title": "Seifenspender ROMA",
-            "subtitle": "Travertin beige",
-            "link": "/products/seifenspender-roma"
-          }
-        },
-        "d2": {
-          "type": "item",
-          "settings": {
-            "fallback": "tiburna-eckig.jpg",
-            "title": "Seifenspender TIVOLI",
-            "subtitle": "Naturstein dunkel",
-            "link": "/products/seifenspender-tivoli"
-          }
-        }
-      },
-      "block_order": [
-        "d1",
-        "d2"
-      ],
-      "disabled": true
-    },
-    "story": {
-      "type": "tiburna-story",
-      "settings": {
-        "fallback": "tiburna-eckig.jpg",
-        "reverse": true,
-        "eyebrow": "Ihr tägliches Ritual",
-        "heading": "Der Morgen <em>beginnt im Bad.</em>",
-        "text": "<p>Warmes Wasser, der Duft Ihrer Seife, der erste ruhige Atemzug des Tages. Diese Minuten gehören nur Ihnen.</p><p>TIBURNA macht daraus ein kleines Ritual – mit Stücken aus echtem Travertin, die sich anfühlen wie ein Wochenende im Spa.</p>",
-        "quote": "Luxus ist, sich jeden Tag einen Moment Ruhe zu schenken.",
-        "color_scheme": "scheme-2"
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Die Kollektion",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 3,
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "padding_top": 80,
-        "padding_bottom": 88
-      },
-      "blocks": {
-        "h": {
-          "type": "heading",
-          "settings": {
-            "heading": "Neues von TIBURNA",
-            "heading_size": "h1"
-          }
-        },
-        "p": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Ideen für Ihr Spa zu Hause und als Erste von neuen Stücken erfahren.</p>"
-          }
-        },
-        "f": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "h",
-        "p",
-        "f"
-      ]
-    },
-    "colosseum": {
-      "type": "tiburna-colosseum",
-      "settings": {
-        "fallback": "tiburna-spa-bad.jpg",
-        "alt": "Spa-Badezimmer aus Travertin im warmen Morgenlicht",
-        "overlay": 45,
-        "eyebrow": "Für Ihr Zuhause",
-        "heading": "Ihr Bad. <em>Ihr Spa.</em>",
-        "text": "<p>Warmer Naturstein, sanftes Licht, ein Moment nur für Sie. Mit TIBURNA wird jeder Morgen zu einer kleinen Auszeit – wie im Spa, jeden Tag bei Ihnen zu Hause.</p>",
-        "inset_fallback": "set-roma-rund.jpg",
-        "inset_caption": "Das Set ROMA. <em>Ihr tägliches Ritual.</em>",
-        "color_scheme": "scheme-3"
-      }
-    },
-    "rom": {
-      "type": "tiburna-colosseum",
-      "settings": {
-        "fallback": "tiburna-kolosseum.jpg",
-        "alt": "Das Kolosseum in Rom im warmen Abendlicht",
-        "overlay": 50,
-        "eyebrow": "Rom · 80 n. Chr.",
-        "heading": "Gebaut für <em>die Ewigkeit.</em>",
-        "text": "<p>Für das Kolosseum verbauten die Römer über 100'000 Kubikmeter Travertin – aus den Steinbrüchen von Tibur, dem heutigen Tivoli. Kaiser kamen und gingen, der Stein blieb. Seit fast 2000 Jahren.</p><p>Heute holen Sie diesen legendären Naturstein zu sich nach Hause.</p>",
-        "inset_fallback": "tiburna-rund.jpg",
-        "inset_caption": "Travertin. <em>Jetzt in Ihrem Bad.</em>",
         "color_scheme": "scheme-3"
       }
     },
     "trust": {
       "type": "tiburna-trust",
-      "settings": {
-        "color_scheme": "scheme-1"
-      },
       "blocks": {
         "t1": {
           "type": "item",
@@ -224,7 +62,178 @@
         "t2",
         "t3",
         "t4"
-      ]
+      ],
+      "settings": {
+        "color_scheme": "scheme-1"
+      }
+    },
+    "values": {
+      "type": "tiburna-values",
+      "blocks": {
+        "v1": {
+          "type": "value",
+          "settings": {
+            "title": "Wie im Hotel-Spa",
+            "text": "Travertin kennt man aus edlen Thermen und Spas. Jetzt steht er bei Ihnen am Waschtisch."
+          }
+        },
+        "v2": {
+          "type": "value",
+          "settings": {
+            "title": "Ruhe, die man spürt",
+            "text": "Kühl in der Hand, warm im Ton. Naturstein bringt Gelassenheit in jeden Morgen und jeden Abend."
+          }
+        },
+        "v3": {
+          "type": "value",
+          "settings": {
+            "title": "Jedes Stück ein Unikat",
+            "text": "Poren, Adern und Farbnuancen machen jedes Objekt einzigartig. Kein Stück gleicht dem anderen."
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2"
+      }
+    },
+    "rom": {
+      "type": "tiburna-colosseum",
+      "settings": {
+        "fallback": "tiburna-kolosseum.jpg",
+        "alt": "Das Kolosseum in Rom im warmen Abendlicht",
+        "overlay": 50,
+        "eyebrow": "Rom · 80 n. Chr.",
+        "heading": "Gebaut für <em>die Ewigkeit.</em>",
+        "text": "<p>Für das Kolosseum verbauten die Römer über 100'000 Kubikmeter Travertin – aus den Steinbrüchen von Tibur, dem heutigen Tivoli. Kaiser kamen und gingen, der Stein blieb. Seit fast 2000 Jahren.</p><p>Heute holen Sie diesen legendären Naturstein zu sich nach Hause.</p>",
+        "inset_fallback": "tiburna-rund.jpg",
+        "inset_caption": "Travertin. <em>Jetzt in Ihrem Bad.</em>",
+        "color_scheme": "scheme-3"
+      }
+    },
+    "story": {
+      "type": "tiburna-story",
+      "settings": {
+        "fallback": "tiburna-eckig.jpg",
+        "reverse": true,
+        "eyebrow": "Ihr tägliches Ritual",
+        "heading": "Der Morgen <em>beginnt im Bad.</em>",
+        "text": "<p>Warmes Wasser, der Duft Ihrer Seife, der erste ruhige Atemzug des Tages. Diese Minuten gehören nur Ihnen.</p><p>TIBURNA macht daraus ein kleines Ritual – mit Stücken aus echtem Travertin, die sich anfühlen wie ein Wochenende im Spa.</p>",
+        "quote": "Luxus ist, sich jeden Tag einen Moment Ruhe zu schenken.",
+        "color_scheme": "scheme-2"
+      }
+    },
+    "duo": {
+      "type": "tiburna-duo",
+      "blocks": {
+        "d1": {
+          "type": "item",
+          "settings": {
+            "fallback": "tiburna-rund.jpg",
+            "title": "Seifenspender ROMA",
+            "subtitle": "Travertin beige",
+            "link": "/products/seifenspender-roma"
+          }
+        },
+        "d2": {
+          "type": "item",
+          "settings": {
+            "fallback": "tiburna-eckig.jpg",
+            "title": "Seifenspender TIVOLI",
+            "subtitle": "Naturstein dunkel",
+            "link": "/products/seifenspender-tivoli"
+          }
+        }
+      },
+      "block_order": [
+        "d1",
+        "d2"
+      ],
+      "disabled": true,
+      "settings": {
+        "eyebrow": "Die Seifenspender",
+        "heading": "Kleine Rituale. <em>Grosse Wirkung.</em>",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "colosseum": {
+      "type": "tiburna-colosseum",
+      "settings": {
+        "fallback": "tiburna-spa-bad.jpg",
+        "alt": "Spa-Badezimmer aus Travertin im warmen Morgenlicht",
+        "overlay": 45,
+        "eyebrow": "Für Ihr Zuhause",
+        "heading": "Ihr Bad. <em>Ihr Spa.</em>",
+        "text": "<p>Warmer Naturstein, sanftes Licht, ein Moment nur für Sie. Mit TIBURNA wird jeder Morgen zu einer kleinen Auszeit – wie im Spa, jeden Tag bei Ihnen zu Hause.</p>",
+        "inset_fallback": "set-roma-rund.jpg",
+        "inset_caption": "Das Set ROMA. <em>Ihr tägliches Ritual.</em>",
+        "color_scheme": "scheme-3"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Die Kollektion",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Die Welt von TIBURNA",
+            "heading_size": "h1"
+          }
+        },
+        "p": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Natürliche Eleganz für dein Zuhause.</p><p>Entdecke unsere Kollektionen aus echtem Travertin und erhalte exklusive Einblicke in die Welt von TIBURNA.</p>"
+          }
+        },
+        "f": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "h",
+        "p",
+        "f"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 88
+      }
     }
   },
   "order": [
